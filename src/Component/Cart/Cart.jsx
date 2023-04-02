@@ -21,7 +21,7 @@ const Cart = ({ cart }) => {
 			<p>Selected Item: {quantity}</p>
 			<p>Price:{totalPrice} </p>
 			<p>Total Shipping: {totalShipping} </p>
-			<p>Text: {text}</p>
+			<p>Text: {text.toFixed(2)}</p>
 			<h3>Grand Total:{gradPrice.toFixed(2)} </h3>
 		</div>
 	);
