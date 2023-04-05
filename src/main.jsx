@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import CheckOut from './Component/CheckOut/CheckOut';
 import Inventory from './Component/Inventory/Inventory';
 import Home from './Component/Layout/Home';
 import LogIn from './Component/LogIn/LogIn';
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
 			{
 				path: 'login',
 				element: <LogIn />,
+			},
+			{
+				path: 'checkout',
+				element: <CheckOut />,
 			},
 		],
 	},
