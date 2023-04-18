@@ -29,12 +29,12 @@ const router = createBrowserRouter([
 				element: <Inventory />,
 			},
 			{
-				path: 'login',
-				element: <LogIn />,
-			},
-			{
 				path: 'checkout',
 				element: <CheckOut />,
+			},
+			{
+				path: 'login',
+				element: <LogIn />,
 			},
 			{
 				path: 'singup',

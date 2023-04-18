@@ -1,0 +1,53 @@
+.login-Container {
+	width: 500px;
+	height: 700px;
+	margin: 50px auto;
+	border: 1px solid gray;
+	border-radius: 8px;
+	padding-left: 40px;
+}
+.form-title {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 42px;
+	text-align: center;
+	letter-spacing: 0.0025em;
+}
+.form-control {
+	margin-bottom: 20px;
+}
+.form-control label {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 20px;
+	letter-spacing: 0.0015em;
+}
+.form-control input {
+	width: 415px;
+	height: 55px;
+	background: #ffffff;
+	border: 1px solid #95a0a7;
+	border-radius: 8px;
+	font-size: 1.5em;
+	padding-left: 10px;
+}
+.btn-submit {
+	width: 427px;
+	height: 55px;
+	background: rgba(255, 153, 0, 0.3);
+	border-radius: 5px;
+	border: none;
+	font-weight: 400;
+	font-size: 21px;
+	line-height: 25px;
+	letter-spacing: 0.0015em;
+	margin-top: 40px;
+}
+.btn-submit:hover {
+	background: rgba(255, 153, 0, 0.6);
+	color: white;
+}
