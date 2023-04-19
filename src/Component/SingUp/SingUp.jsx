@@ -27,6 +27,8 @@ const SingUp = () => {
 		createUser(email, password)
 			.then((result) => {
 				const loggedUser = result.user;
+				setError('');
+				form.reset();
 				console.log(loggedUser);
 			})
 			.catch((error) => {

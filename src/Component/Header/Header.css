@@ -15,3 +15,7 @@
 .header a:hover {
 	color: orange;
 }
+.text-white {
+	color: #fff;
+	margin: 10px;
+}
