@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthUserContext } from '../Auth/AuthProvider';
 import './SingUp.css';
 
 const SingUp = () => {
+	const { createUser } = useContext(AuthUserContext);
 	const [error, setError] = useState();
 	const handleSingUp = (event) => {
 		event.preventDefault();
@@ -21,6 +23,15 @@ const SingUp = () => {
 			setError('your password must 6 characters or longer');
 			return;
 		}
+		// firebase account create
+		createUser(email, password)
+			.then((result) => {
+				const loggedUser = result.user;
+				console.log(loggedUser);
+			})
+			.catch((error) => {
+				setError(error.message);
+			});
 	};
 	return (
 		<div className="login-Container">
