@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Login.css';
 
 const LogIn = () => {
@@ -27,6 +28,9 @@ const LogIn = () => {
 
 				<input className="btn-submit" type="submit" value="Log in" />
 			</form>
+			<p>
+				New to Ema-john? <Link to="/singup">Create New Account</Link>
+			</p>
 		</div>
 	);
 };

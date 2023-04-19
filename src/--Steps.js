@@ -6,3 +6,10 @@
  * 5. Build > Authentication > get started > enable sing in method
  * 6. create sing up and log in route
  */
+
+/**
+ * 1.create a context provider file
+ * 2. create a context and set provider
+ * 3. set the children props
+ *
+ * */
