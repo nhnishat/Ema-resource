@@ -10,6 +10,7 @@ import Orders from './Component/Oders/Orders';
 import Shop from './Component/Shop/Shop';
 import SingUp from './Component/SingUp/SingUp';
 import CartProductsLoaders from './Loaders/CartProductsLoaders';
+import PrivateRoute from './Routes/PrivateRoute';
 // import './index.css';
 const router = createBrowserRouter([
 	{
@@ -27,11 +28,19 @@ const router = createBrowserRouter([
 			},
 			{
 				path: 'inventory',
-				element: <Inventory />,
+				element: (
+					<PrivateRoute>
+						<Inventory />
+					</PrivateRoute>
+				),
 			},
 			{
 				path: 'checkout',
-				element: <CheckOut />,
+				element: (
+					<PrivateRoute>
+						<CheckOut />
+					</PrivateRoute>
+				),
 			},
 			{
 				path: 'login',

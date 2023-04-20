@@ -1,11 +1,16 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthUserContext } from '../Auth/AuthProvider';
 import './Login.css';
 
 const LogIn = () => {
+	const [show, setShow] = useState();
 	const { logInUser } = useContext(AuthUserContext);
+	const navigate = useNavigate();
 	const [error, setError] = useState('');
+	const location = useLocation();
+	console.log(location);
+	const from = location.state?.from?.pathname || '/';
 
 	const handleLogInUser = (event) => {
 		event.preventDefault();
@@ -19,6 +24,7 @@ const LogIn = () => {
 				console.log(loggedUser);
 				form.reset();
 				setError('');
+				navigate(from, { replace: true });
 			})
 			.catch((error) => {
 				setError(error.message);
@@ -42,11 +48,16 @@ const LogIn = () => {
 					<label htmlFor="email">Password</label>
 					<p className="color-text">{error}</p>
 					<input
-						type="password"
+						type={show ? 'text' : 'password'}
 						name="password"
 						placeholder="Enter your password"
 						required
 					/>
+					<p onClick={() => setShow(!show)}>
+						<small>
+							{show ? <span>Hide password</span> : <span>Show password</span>}
+						</small>
+					</p>
 				</div>
 
 				<input className="btn-submit" type="submit" value="Log in" />
